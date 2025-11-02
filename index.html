@@ -65,7 +65,7 @@
   <!-- ✅ STYLES & WIDGETS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" defer></script>
 </head>
 
 </head>
@@ -173,8 +173,11 @@
 
           <div class="mt-4">
             <button
-              onclick="window.Calendly && window.Calendly.initPopupWidget({ url: 'https://calendly.com/izabelagorelik1/15min' })"
-              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50">
+              <button
+  onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/izabelagorelik1/15min' }); return false;"
+  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-50">
+  Open Calendly
+</button>
               Open Calendly
             </button>
           </div>
